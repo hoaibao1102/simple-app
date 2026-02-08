@@ -1,11 +1,16 @@
 {
   "name": "be",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "api/index.js",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js "
+    "dev": "nodemon src/server.js",
+    "vercel-build": "echo 'Build completed'"
   },
   "keywords": [],
   "author": "",

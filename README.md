@@ -19,6 +19,7 @@
 - [Authentication Flow](#-authentication-flow)
 - [Biến môi trường](#-biến-môi-trường)
 - [Scripts](#️-scripts)
+- [Deployment](#-deployment)
 - [Best Practices](#-best-practices)
 - [Roadmap](#-roadmap)
 
@@ -863,6 +864,99 @@ git commit -m "docs: Update API documentation"
 - [ ] HTTPS trong production
 - [ ] Regular security audits
 
-## 📄 License
+## � Deployment
+
+### Deploy lên Vercel
+
+Dự án này đã được cấu hình sẵn để deploy lên **Vercel** - nền tảng hosting tuyệt vời cho Full Stack applications.
+
+#### 📚 Tài liệu Deployment
+
+Chúng tôi đã chuẩn bị 2 tài liệu chi tiết để hướng dẫn bạn deploy:
+
+1. **[DEPLOYMENT.md](DEPLOYMENT.md)** - Hướng dẫn chi tiết từng bước
+   - Setup MongoDB Atlas
+   - Deploy Backend lên Vercel
+   - Deploy Frontend lên Vercel
+   - Cấu hình CORS và Environment Variables
+   - Troubleshooting guide
+   - Test end-to-end
+
+2. **[DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md)** - Checklist nhanh
+   - Checklist từng bước ngắn gọn
+   - Điền thông tin khi deploy
+   - Track progress
+   - Quick troubleshooting
+
+#### 🎯 Quick Start
+
+**Yêu cầu:**
+
+- ✅ Tài khoản [Vercel](https://vercel.com) (miễn phí)
+- ✅ Tài khoản [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) (miễn phí)
+- ✅ Code đã push lên GitHub
+
+**Các bước nhanh:**
+
+1. **MongoDB Atlas**: Tạo database cluster và lấy connection string
+2. **Deploy Backend**: Import từ GitHub → Set env vars → Deploy
+3. **Deploy Frontend**: Import từ GitHub → Set API URL → Deploy
+4. **Update CORS**: Cập nhật CORS_ORIGIN và redeploy backend
+5. **Test**: Mở app và test các tính năng
+
+#### 📦 Files đã chuẩn bị
+
+```
+simple-app/
+├── BE/
+│   ├── api/
+│   │   └── index.js          # Vercel serverless handler
+│   ├── vercel.json            # Vercel config cho backend
+│   └── .vercelignore          # Files to ignore
+│
+├── FE/
+│   ├── vercel.json            # Vercel config cho frontend
+│   └── .vercelignore          # Files to ignore
+│
+├── DEPLOYMENT.md              # Chi tiết deployment guide
+└── DEPLOYMENT_CHECKLIST.md    # Quick checklist
+```
+
+#### 🌐 Demo URLs (sau khi deploy)
+
+```
+Frontend:  https://your-app-name.vercel.app
+Backend:   https://your-api-name.vercel.app
+API Docs:  https://your-api-name.vercel.app/api-docs
+```
+
+#### 💡 Tips
+
+- ✅ Deploy backend trước, frontend sau
+- ✅ Lưu lại tất cả secrets và connection strings
+- ✅ Test `/api/health` endpoint sau khi deploy backend
+- ✅ Check browser console nếu có lỗi CORS
+- ✅ Sử dụng Vercel logs để debug issues
+
+👉 **Xem [DEPLOYMENT.md](DEPLOYMENT.md) để bắt đầu!**
+
+#### 🔄 CI/CD Tự động
+
+Sau khi setup xong, Vercel sẽ tự động:
+
+- ✅ Deploy khi push lên branch `main`
+- ✅ Tạo preview URLs cho các branches khác
+- ✅ Deploy preview cho Pull Requests
+
+#### 🆘 Cần giúp đỡ?
+
+Nếu gặp vấn đề khi deploy:
+
+1. Xem [DEPLOYMENT.md - Troubleshooting](DEPLOYMENT.md#-troubleshooting)
+2. Check Vercel Function Logs
+3. Verify environment variables
+4. Test MongoDB connection string
+
+## �📄 License
 
 ISC - Dự án này được tạo ra cho mục đích học tập và không có giấy phép thương mại.

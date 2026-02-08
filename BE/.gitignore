@@ -1,0 +1,70 @@
+# ========================
+# Node.js
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========================
+# Environment variables
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# Build / coverage
+# ========================
+dist/
+build/
+coverage/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
+
+# ========================
+# OS / Editor
+# ========================
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+!.vscode/extensions.json
+
+# ========================
+# Temporary / runtime files
+# ========================
+tmp/
+temp/
+.cache/
+
+# ========================
+# MongoDB
+# ========================
+dump/
+*.bson
+*.lock
+
+# ========================
+# Swagger / docs build (nếu sau này export)
+# ========================
+swagger-output.json
+
+# ========================
+# Test artifacts
+# ========================
+test-results/
+playwright-report/
+
+# ========================
+# Misc
+# ========================
+*.pid
+*.seed
+*.pid.lock

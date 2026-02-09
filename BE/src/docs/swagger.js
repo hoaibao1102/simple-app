@@ -103,9 +103,10 @@ const options = {
       { name: "Auth", description: "Authentication" },
       { name: "Users", description: "User profile" },
       { name: "Tasks", description: "Task CRUD" },
+      { name: "Admin", description: "Admin user management" },
     ],
   },
-  apis: ["./src/modules/**/*.routes.js", "./src/routes/index.js"],
+  apis: ["./src/models/**/*.routes.js", "./src/routes/index.js"],
 };
 
 export const swaggerSpec = swaggerJsdoc(options);

@@ -1,14 +1,11 @@
-import { useState } from "react";
-import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Task Manager</h1>
-        <p>Frontend đang được phát triển...</p>
-      </header>
-    </div>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 
